@@ -7,12 +7,12 @@ type User struct {
 }
 
 // Create ...
-func Create(name string, email string) *User {
+func Create(name string, email string) (*User, error) {
 	u := User{
 		Name:  name,
 		Email: email,
 	}
 
-	return &u
+	return &u, nil
 
 }
